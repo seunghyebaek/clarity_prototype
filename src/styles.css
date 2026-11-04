@@ -1,0 +1,186 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-sans: "IBM Plex Sans", "IBM Plex Sans KR", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-warning: var(--warning);
+  --color-warning-foreground: var(--warning-foreground);
+  --color-warning-soft: var(--warning-soft);
+  --color-success: var(--success);
+  --color-success-soft: var(--success-soft);
+  --color-danger-soft: var(--danger-soft);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-ring-offset-background: var(--background);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --shadow-panel: var(--shadow-panel-value);
+  --shadow-raised: var(--shadow-raised-value);
+  --color-learn: var(--learn);
+  --color-learn-soft: var(--learn-soft);
+  --color-highlight: var(--highlight);
+  --color-surface-sunken: var(--surface-sunken);
+  --color-primary-strong: var(--primary-strong);
+  --font-display: "Bricolage Grotesque", "IBM Plex Sans KR", system-ui, sans-serif;
+  --animate-flash: flash 1.6s ease-out 1;
+  --animate-rise: rise 0.28s ease-out both;
+}
+
+:root {
+  --radius: 0.75rem;
+  --background: oklch(0.978 0.003 265);       /* #F7F8FA */
+  --foreground: oklch(0.297 0.07 262);        /* #172B4D */
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.297 0.07 262);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.297 0.07 262);
+  --surface-sunken: oklch(0.962 0.005 265);
+  --primary: oklch(0.53 0.09 205);            /* #087F8C */
+  --primary-strong: oklch(0.45 0.08 205);
+  --primary-foreground: oklch(0.99 0 0);
+  --secondary: oklch(0.955 0.008 265);
+  --secondary-foreground: oklch(0.297 0.07 262);
+  --muted: oklch(0.962 0.005 265);
+  --muted-foreground: oklch(0.47 0.035 262);
+  --accent: oklch(0.95 0.03 200);
+  --accent-foreground: oklch(0.4 0.075 205);
+  --destructive: oklch(0.53 0.17 25);
+  --destructive-foreground: oklch(0.99 0 0);
+  --danger-soft: oklch(0.965 0.022 25);
+  --warning: oklch(0.5 0.11 62);
+  --warning-foreground: oklch(0.99 0 0);
+  --warning-soft: oklch(0.965 0.045 85);
+  --success: oklch(0.5 0.11 155);
+  --success-soft: oklch(0.96 0.035 155);
+  --learn: oklch(0.48 0.12 295);
+  --learn-soft: oklch(0.955 0.025 295);
+  --border: oklch(0.915 0.008 265);
+  --input: oklch(0.88 0.012 265);
+  --ring: oklch(0.53 0.09 205);
+  --highlight: oklch(0.93 0.08 95);
+  --chart-1: oklch(0.6 0.03 250);
+  --chart-2: oklch(0.53 0.09 205);
+  --chart-3: oklch(0.6 0.1 70);
+  --chart-4: oklch(0.55 0.1 30);
+  --chart-5: oklch(0.6 0.08 155);
+  --sidebar: oklch(0.297 0.07 262);
+  --sidebar-foreground: oklch(0.86 0.02 262);
+  --sidebar-primary: oklch(0.72 0.09 200);
+  --sidebar-primary-foreground: oklch(0.2 0.05 262);
+  --sidebar-accent: oklch(0.36 0.07 262);
+  --sidebar-accent-foreground: oklch(0.99 0 0);
+  --sidebar-border: oklch(0.36 0.06 262);
+  --sidebar-ring: oklch(0.72 0.09 200);
+  --shadow-panel-value: 0 1px 2px oklch(0.297 0.07 262 / 0.04), 0 4px 12px -8px oklch(0.297 0.07 262 / 0.1);
+  --shadow-raised-value: 0 1px 3px oklch(0.297 0.07 262 / 0.05), 0 10px 24px -16px oklch(0.297 0.07 262 / 0.18);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    word-break: keep-all;
+    overflow-wrap: anywhere;
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-ring);
+    outline-offset: 2px;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@utility prose-answer {
+  line-height: 1.7;
+  & p { margin: 0 0 0.75rem; }
+  & p:last-child { margin-bottom: 0; }
+  & ul { list-style: disc; padding-left: 1.25rem; margin: 0 0 0.75rem; }
+  & ol { list-style: decimal; padding-left: 1.25rem; margin: 0 0 0.75rem; }
+  & li { margin: 0.2rem 0; }
+  & strong { font-weight: 600; }
+  & code { font-family: var(--font-mono); font-size: 0.85em; background: var(--color-muted); padding: 0.1rem 0.3rem; border-radius: 0.25rem; }
+  & a { color: var(--color-primary); text-decoration: underline; }
+}
+
+@keyframes flash {
+  0% { background-color: var(--color-highlight); box-shadow: 0 0 0 3px var(--color-highlight); }
+  100% { background-color: var(--color-highlight); box-shadow: 0 0 0 0 transparent; }
+}
+@keyframes rise {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: none; }
+}
+
+@utility font-display {
+  font-family: var(--font-display);
+  letter-spacing: -0.015em;
+}
+
+@utility diff-added {
+  background: var(--color-success-soft);
+  color: var(--color-success);
+  text-decoration: underline;
+  text-decoration-color: var(--color-success);
+  text-underline-offset: 3px;
+  border-radius: 0.25rem;
+  padding: 0 0.15rem;
+}
+@utility diff-removed {
+  background: var(--color-danger-soft);
+  color: var(--color-destructive);
+  text-decoration: line-through;
+  border-radius: 0.25rem;
+  padding: 0 0.15rem;
+}
+@utility evidence-mark {
+  background: var(--color-highlight);
+  border-radius: 0.2rem;
+  padding: 0.05rem 0.15rem;
+  box-decoration-break: clone;
+}
